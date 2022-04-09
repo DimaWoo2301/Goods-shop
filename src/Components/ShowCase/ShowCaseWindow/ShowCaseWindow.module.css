@@ -1,0 +1,59 @@
+.wrapperPhone{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px gray;
+    height: 500px;
+    width: 500px;
+}
+.wrapperPhone img{
+    height: 400px;
+    width: 300px;
+    margin: 25px 0 25px 0;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.color{
+    width: 330px;
+    height: 170px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+}
+.infoPhone{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.radius{
+    padding: 40px;
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+.circle{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+.circle:hover{
+    transform:scale(1.5, 1.5);
+    transition-duration: 0.4s;
+}
+.circleR{
+    background-color: red;
+}
+.circleB{
+    background-color: blue;
+}
+.circleY{
+    background-color: yellow;
+}

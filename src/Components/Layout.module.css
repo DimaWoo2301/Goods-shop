@@ -1,0 +1,41 @@
+.container {
+    min-height: 763px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.headerContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footerContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background-color: black;
+}
+
+.header a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 50px;
+}
+
+.header a:hover {
+    color: red;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 50px;
+    background-color: black;
+    color: #ffffff;
+}
