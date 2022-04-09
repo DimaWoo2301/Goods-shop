@@ -12,6 +12,7 @@
     width: 500px;
 }
 .wrapperPhone img{
+    object-fit: contain;
     height: 400px;
     width: 300px;
     margin: 25px 0 25px 0;
