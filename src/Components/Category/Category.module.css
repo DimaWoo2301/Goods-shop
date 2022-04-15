@@ -1,0 +1,18 @@
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.wrapper_items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.wrapper_items a {
+    text-decoration: none;
+    color: #4E4E4E;
+    font-size: 16px;
+    font-weight: 700;
+}

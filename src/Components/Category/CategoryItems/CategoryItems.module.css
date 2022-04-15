@@ -1,0 +1,24 @@
+.wrapperItem {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 50px 0 50px 0;
+}
+.wrapperItem a {
+    text-decoration: none;
+    color: #4E4E4E;
+}
+.button{
+    width: 500px;
+    height: 500px;
+    background-color: black;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.wrapper h1 {
+    margin: 0;
+}

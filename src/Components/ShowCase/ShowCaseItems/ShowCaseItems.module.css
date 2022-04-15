@@ -6,28 +6,33 @@
     margin-bottom: 20px;
 }
 .items img:hover {
-    transition-duration: 0.4s;
-    width: 300px;
-    height: 300px;
+    transform: scale(1.05, 1.05);
+}
+.items p {
+    margin: 0;
+    padding: 10px;
 }
 /*блок увиличивался*/
 .items {
+    display: flex;
     position: relative;
     width: 350px;
-    height: 400px;
-    display: flex;
+    height: 440px;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
+    margin: 0 0 40px 0;
     padding: 10px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 2px 2px gray;
+    box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+.items a {
+    text-decoration: none;
+    color: #4E4E4E;
 }
 .items:hover {
-    transform: scale(1.1, 1.1);
-    transition-duration: 0.4s;
-    box-shadow: 5px 5px gray;
+    transform: scale(1.05, 1.05);
+    box-shadow: 0 6px 11px 3px rgba(34, 60, 80, 0.2);
 }
 
 .price{
@@ -47,15 +52,21 @@
     font-weight:bold;
     color: #2A2A2A;
 }
+.name{
+    margin-bottom: 10px;
+}
 .button{
-    background-color: #FF8339;
-    border: none;
-    border-radius: 5px;
-    height: 30px;
-    box-shadow: 2px 2px gray;
+    width: 78px;
+    height: 42px;
+    padding: 0 10px 0 10px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 2px solid #D9D9D9;
 }
 .button:hover {
-    transform: scale(1.2, 1.2);
+    background-color: #FC8507;
+    border: 2px solid #fc8507;
+    color: #ffffff;
     transition-duration: 0.4s;
-    box-shadow: 5px 5px gray;
 }
