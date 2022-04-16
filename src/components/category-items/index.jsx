@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 
 import { body, types } from '../../response';
-import ShowCaseItem from '../ShowCase/show-case-items';
+import ShowCaseItem from '../glass-case-items';
 import s from './category-items.module.css';
 
 const CategoryItems = () => {

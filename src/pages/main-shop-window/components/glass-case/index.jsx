@@ -1,11 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { body } from '../../response';
+import ShowCaseItem from '../../../../components/glass-case-items';
+import { body } from '../../../../response';
 import s from './show-case.module.css';
-import ShowCaseItem from './show-case-items';
 
-const ShowCase = () => (
+const GlassCase = () => (
   <div>
     <div className={s.wrapper}>
       {body.map((product) => (
@@ -23,4 +23,4 @@ const ShowCase = () => (
   </div>
 );
 
-export default ShowCase;
+export default GlassCase;

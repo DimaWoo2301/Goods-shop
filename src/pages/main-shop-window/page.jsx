@@ -1,9 +1,9 @@
 import React from 'react';
 
-import ShowCase from '../../components/ShowCase';
+import GlassCase from './components/glass-case';
 
 const ShopWindowPage = () => (
-  <ShowCase />
+  <GlassCase />
 );
 
 export default ShopWindowPage;
