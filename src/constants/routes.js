@@ -1,6 +1,6 @@
 const ROUTES = {
   BASE: '/',
-  CATEGORY: '/category',
+  CATEGORY: '/category-items',
   POST: '/post',
 };
 

@@ -6,7 +6,6 @@ import s from './shop.module.css';
 
 const ShopWindow = () => {
   const navigate = useNavigate();
-
   const onGoBack = () => {
     navigate(-1);
   };
@@ -14,7 +13,7 @@ const ShopWindow = () => {
   return (
     <div className={s.wrapper}>
       <header className={s.header}>
-        <button type="submit" onClick={onGoBack}>&lt;---</button>
+        <button className={s.button} type="submit" onClick={onGoBack}>&#5176;</button>
         <div className={s.headerContainer}>
           <NavLink to={ROUTES.BASE}>Магазин</NavLink>
           <NavLink to={ROUTES.CATEGORY}>Категория</NavLink>

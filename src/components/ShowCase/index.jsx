@@ -2,8 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import { body } from '../../response';
+import s from './show-case.module.css';
 import ShowCaseItem from './show-case-items';
-import s from './ShowCase.module.css';
 
 const ShowCase = () => (
   <div>

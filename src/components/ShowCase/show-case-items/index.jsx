@@ -1,6 +1,6 @@
 import React from 'react';
 
-import s from './ShowCaseItems.module.css';
+import s from './show-case-items.module.css';
 
 const ShowCaseItem = ({
   name, mainImage, text, price,

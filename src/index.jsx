@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import CategoryItems from './components/category/category-items';
+import CategoryItems from './components/category-items';
 import ROUTES from './constants/routes';
 import Category from './pages/category-page/page';
 import ShopWindowPage from './pages/main-shop-window/page';

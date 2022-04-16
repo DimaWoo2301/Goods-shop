@@ -218,4 +218,14 @@ export const types = [
     name: 'Ноутбуки',
     img: 'https://st4.depositphotos.com/1890869/24643/v/450/depositphotos_246431000-stock-illustration-isolated-laptop-empty-space-white.jpg?forcejpeg=true',
   },
+  {
+    id: 4,
+    name: 'Комплектующие для коммпьютеров',
+    img: 'https://st4.depositphotos.com/1890869/24643/v/450/depositphotos_246431000-stock-illustration-isolated-laptop-empty-space-white.jpg?forcejpeg=true',
+  },
+  {
+    id: 5,
+    name: 'Стиральные машины',
+    img: 'https://st4.depositphotos.com/1890869/24643/v/450/depositphotos_246431000-stock-illustration-isolated-laptop-empty-space-white.jpg?forcejpeg=true',
+  },
 ];
