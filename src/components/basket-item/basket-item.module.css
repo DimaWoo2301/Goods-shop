@@ -1,0 +1,32 @@
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 903px;
+    height: 124px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 10px;
+}
+.infoProduct{
+    display: flex;
+}
+.infoPrice{
+    display: flex;
+    flex-direction: column;
+}
+.info{
+    margin-bottom: 8px;
+}
+.line{
+    width: 1px;
+    height: 25px;
+    background-color: #E0E6EF;
+    margin: 0 15px 0 15px;
+}
+.branchLine{
+    height: 1px;
+    width: 900px;
+    margin: 0 auto;
+    border-radius: 2px;
+    background-color: #E0E6EF;
+}

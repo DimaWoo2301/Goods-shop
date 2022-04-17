@@ -1,15 +1,18 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 
-import { body, types } from '../../response';
-import ShowCaseItem from '../ShowCase/show-case-items';
+import GlassCaseItem from '../glass-case-item';
 import s from './category-items.module.css';
 
 const CategoryItems = () => {
   const { typesId } = useParams();
 
+  const products = useSelector((state) => state.shop.products);
+  const types = useSelector((state) => state.shop.types);
+
   const currentCategory = types.find((el) => el.id === Number(typesId));
-  const filterByCurrentCategory = body.filter((el) => el.typesId === Number(typesId));
+  const filterByCurrentCategory = products.filter((el) => el.typesId === Number(typesId));
 
   return (
     <>
@@ -20,12 +23,13 @@ const CategoryItems = () => {
         {filterByCurrentCategory
           .map((el) => (
             <Link key={el.productInfo.name} to={`/post/${el.id}`}>
-              <ShowCaseItem
+              <GlassCaseItem
                 name={el.productInfo.name}
                 price={el.productInfo.price}
                 text={el.productInfo.infoText}
                 mainImage={el.productInfo.mainImage}
                 id={el.id}
+                product={el}
               />
             </Link>
           ))}

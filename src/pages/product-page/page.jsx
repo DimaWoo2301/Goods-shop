@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
 import SwitchColor from '../../components/switch-color';
 import COLOR_PRODUCT from '../../constants/color-products';
-import { body } from '../../response';
 import crushingPriceNumbers from '../../utils/crushing-price-numbers';
 import s from './show-case-window.module.css';
 
 const ProductPage = () => {
   const { id } = useParams();
+  const products = useSelector((state) => state.shop.products);
 
-  const { productInfo } = body.find((el) => el.id === Number(id));
+  const { productInfo } = products.find((el) => el.id === Number(id));
 
   const [characteristicsProduct, setCharacteristicsProduct] = useState(null);
 

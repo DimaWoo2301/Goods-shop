@@ -13,10 +13,11 @@ const ShopWindow = () => {
   return (
     <div className={s.wrapper}>
       <header className={s.header}>
-        <button className={s.button} type="submit" onClick={onGoBack}>&#5176;</button>
+        <button className={s.button} type="button" onClick={onGoBack}>&#5176;</button>
         <div className={s.headerContainer}>
           <NavLink to={ROUTES.BASE}>Магазин</NavLink>
           <NavLink to={ROUTES.CATEGORY}>Категория</NavLink>
+          <NavLink to={ROUTES.BASKET}>Корзина</NavLink>
         </div>
       </header>
       <div className={s.container}>

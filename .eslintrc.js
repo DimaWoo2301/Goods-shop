@@ -4,8 +4,8 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    'plugin:react/recommended',
     'airbnb',
+    'airbnb/hooks',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -25,5 +25,6 @@ module.exports = {
     'simple-import-sort/exports': 'error',
     'jsx-a11y/click-events-have-key-events': 0,
     'jsx-a11y/control-has-associated-label': 0,
+    'default-param-last': 0,
   },
 };
