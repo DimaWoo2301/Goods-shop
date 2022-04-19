@@ -1,13 +1,23 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
+import { deleteBasket } from '../../redux/basket-reducer';
+import crushingPriceNumbers from '../../utils/crushing-price-numbers';
 import s from './basket-item.module.css';
 
 const BasketItem = () => {
+  const dispatch = useDispatch();
   const product = useSelector((state) => state.basket.basket);
-
+  const fullPrice = product.reduce((total, el) => total + el.productInfo.price, 0);
+  const countProduct = product.length === 0 ? '' : `Количество продуктов: ${product.length}`;
+  const price = crushingPriceNumbers(fullPrice) === 0 ? 'Карзина пуста'
+    : `Полная цена всех покупок: ${crushingPriceNumbers(fullPrice)} Руб.`;
+  const onDeleteProduct = (id) => () => {
+    dispatch(deleteBasket(id));
+  };
   return (
     <div>
+
       {product.map((el) => (
         <>
           <div className={s.branchLine} />
@@ -23,16 +33,24 @@ const BasketItem = () => {
               <div className={`${s.infoProduct}${s.info}`}>
                 <span>В избранное</span>
                 <span className={s.line} />
-                <span>Удалить</span>
+                <button type="button" onClick={onDeleteProduct(el.id)}>Удалить</button>
               </div>
             </div>
             <div className={`${s.infoPrice}${s.info}`}>
-              <span>{el.productInfo.price}</span>
-              <span>Скидка какая то...</span>
+              <div>
+                {crushingPriceNumbers(el.productInfo.price) }
+                {' '}
+                Руб.
+              </div>
+              <div>Скидка какая то...</div>
             </div>
           </div>
         </>
       ))}
+      <div className={s.wrapperPrice}>
+        <div>{price}</div>
+        <div>{countProduct}</div>
+      </div>
     </div>
   );
 };

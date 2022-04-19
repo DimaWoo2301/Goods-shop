@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 import { setBasket } from '../../redux/basket-reducer';
 import crushingPriceNumbers from '../../utils/crushing-price-numbers';
@@ -8,13 +9,18 @@ import s from './glass-case-items.module.css';
 const GlassCaseItem = ({
   name, mainImage, text, price, product,
 }) => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [bay, setBay] = useState('Купить');
   const basket = useSelector((state) => state.basket.basket.find((el) => el.id === product.id));
+  const isProductInBasket = !basket ? 'Купить' : 'В корзине';
+
   const onClickBasket = (event) => {
     event.preventDefault();
-    dispatch(setBasket('', product));
-    if (!basket) { setBay('В корзине'); } else setBay('Купить');
+    if (!basket) {
+      dispatch(setBasket(product));
+    } else {
+      navigate('/basket');
+    }
   };
   return (
     <div className={s.items}>
@@ -26,7 +32,7 @@ const GlassCaseItem = ({
           {crushingPriceNumbers(price)}
           <span> руб.</span>
         </span>
-        <button onClick={onClickBasket} type="submit" className={s.button}>{bay}</button>
+        <button onClick={onClickBasket} type="submit" className={s.button}>{isProductInBasket}</button>
       </div>
     </div>
   );

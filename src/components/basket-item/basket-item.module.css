@@ -30,3 +30,12 @@
     border-radius: 2px;
     background-color: #E0E6EF;
 }
+.wrapperPrice{
+    padding: 10px;
+    margin: 0 auto;
+    width: 903px;
+    height: 100px;
+    background-color: #4E4E4E;
+    color: #ffffff;
+    border-radius: 0 0 10px 10px;
+}
