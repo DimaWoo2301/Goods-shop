@@ -1,15 +1,7 @@
 const SET_IT_BASKET = 'SET_IT_BASKET';
 const DELETE_POST = 'DELETE_POST';
 const initialState = {
-  basket: [{
-    id: 1,
-    isActive: true,
-    productInfo: {
-      name: 'awd',
-      price: 123,
-      mainImage: '',
-    },
-  }],
+  basket: [],
   isFetching: true,
   isActive: false,
   allPrice: 0,

@@ -49,7 +49,6 @@ const BasketItem = () => {
       ))}
       <div className={s.wrapperPrice}>
         <div>{price}</div>
-        <span>Корзина пуста</span>
         <div>{countProduct}</div>
       </div>
     </div>
