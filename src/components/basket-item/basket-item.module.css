@@ -39,3 +39,8 @@
     color: #ffffff;
     border-radius: 0 0 10px 10px;
 }
+.imageProduct{
+    object-fit: contain;
+    width: 100px;
+    height: 100px;
+}
