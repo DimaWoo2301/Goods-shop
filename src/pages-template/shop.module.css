@@ -4,13 +4,37 @@
     margin: 0 auto;
 }
 
-.headerContainer {
-    max-width: 1000px;
-    margin: 0 auto;
+.header {
     display: flex;
+    justify-content: center;
+    height: 100px;
+    background-color: black;
+}
+.header a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.headerContainer {
+    height: 100%;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.itemLink{
+    display: flex;
+}
+
+.itemBasket{
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
+.itemLink a {
+    margin-right: 30px;
+}
 .footerContainer {
     max-width: 1000px;
     margin: 0 auto;
@@ -22,7 +46,7 @@
     background-color: #000000;
     color: #ffffff;
     font-size: 20px;
-    margin-left: 20px;
+    margin: 10px 0 0 30px;
 }
 
 .button:hover{
@@ -32,18 +56,6 @@
 position: absolute;
 }
 
-.header {
-    display: flex;
-    align-items: center;
-    height: 100px;
-    background-color: black;
-}
-
-.header a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-right: 50px;
-}
 
 .wrapper{
     overflow: hidden;

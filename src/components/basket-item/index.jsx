@@ -17,12 +17,11 @@ const BasketItem = () => {
   };
   return (
     <div>
-
       {product.map((el) => (
         <>
           <div className={s.branchLine} />
           <div className={s.wrapper}>
-            <img src={el.productInfo.mainImage} alt="Картинка продукта" />
+            <img className={s.imageProduct} src={el.productInfo.mainImage} alt="Картинка продукта" />
             <div>
               <div>
                 <span className={s.info}>{el.productInfo.name}</span>
@@ -31,8 +30,6 @@ const BasketItem = () => {
                 <span className={s.info}>Какая то информация о продукте</span>
               </div>
               <div className={`${s.infoProduct}${s.info}`}>
-                <span>В избранное</span>
-                <span className={s.line} />
                 <button type="button" onClick={onDeleteProduct(el.id)}>Удалить</button>
               </div>
             </div>
