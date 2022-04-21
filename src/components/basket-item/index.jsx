@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -15,11 +16,12 @@ const BasketItem = () => {
   const onDeleteProduct = (id) => () => {
     dispatch(deleteBasket(id));
   };
+  // className={cn(s.circle, { [s.active]: el.color === currentColor })}`${s.infoProduct}${s.info}`
   return (
-    <div>
+    <div className={s.container}>
       {product.map((el) => (
         <>
-          <div className={s.branchLine} />
+
           <div className={s.wrapper}>
             <img className={s.imageProduct} src={el.productInfo.mainImage} alt="Картинка продукта" />
             <div>
@@ -29,19 +31,20 @@ const BasketItem = () => {
               <div>
                 <span className={s.info}>Какая то информация о продукте</span>
               </div>
-              <div className={`${s.infoProduct}${s.info}`}>
+              <div className={cn(s.infoProduct, s.info)}>
                 <button type="button" onClick={onDeleteProduct(el.id)}>Удалить</button>
               </div>
             </div>
-            <div className={`${s.infoPrice}${s.info}`}>
+            <div className={cn(s.infoProduct, s.info)}>
               <div>
                 {crushingPriceNumbers(el.productInfo.price) }
                 {' '}
                 Руб.
+                <div>Скидка какая то...</div>
               </div>
-              <div>Скидка какая то...</div>
             </div>
           </div>
+          <div className={s.branchLine} />
         </>
       ))}
       <div className={s.wrapperPrice}>

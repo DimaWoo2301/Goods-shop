@@ -17,15 +17,14 @@ const ShopWindow = () => {
           <div className={s.itemLink}>
             <NavLink to={ROUTES.BASE}>Магазин</NavLink>
             <NavLink to={ROUTES.CATEGORY}>Категория</NavLink>
+            <div className={s.basket}>
+              <NavLink to={ROUTES.BASKET}>Корзина</NavLink>
+            </div>
           </div>
         </div>
-        <div className={s.itemBasket}>
-          <NavLink to={ROUTES.BASKET}>Корзина</NavLink>
-        </div>
-
       </header>
       <div className={s.container}>
-        <button className={s.button} type="button" onClick={onGoBack}>&#5176;</button>
+        <button className={s.button} type="button" onClick={onGoBack}>&#60;</button>
         <Outlet />
       </div>
       <footer className={s.footer}>

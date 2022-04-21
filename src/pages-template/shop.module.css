@@ -16,6 +16,7 @@
 }
 
 .headerContainer {
+    position: relative;
     height: 100%;
     width: 1000px;
     display: flex;
@@ -39,18 +40,21 @@
     max-width: 1000px;
     margin: 0 auto;
 }
-
+.basket{
+    right: 20px;
+    position: absolute;
+}
 .button{
+    cursor: pointer;
     position: absolute;
     border: none;
-    background-color: #000000;
-    color: #ffffff;
-    font-size: 20px;
-    margin: 10px 0 0 30px;
+    background-color: #FCF8F2;
+    color: #000000;
+    font-size: 30px;
+    margin: 15px 0 0 90px;
 }
-
 .button:hover{
-    transform: scale(1.3,1.3);
+    transform: scale(1.2,1.2);
 }
 .basketButton{
 position: absolute;
