@@ -1,12 +1,11 @@
 import React from 'react';
 
-import s from './empty-content-module.css';
+import s from './empty-content.module.css';
 
-const EmptyContent = ({ bannerText = '', mainText = '' }) => (
+const EmptyContent = ({ children }) => (
   <div className={s.emptyContent}>
     <div className={s.container}>
-      <h1>{bannerText}</h1>
-      <h3>{mainText}</h3>
+      {children}
     </div>
   </div>
 );

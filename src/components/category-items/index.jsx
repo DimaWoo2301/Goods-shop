@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 
+import EmptyContent from '../empty-content';
 import GlassCaseItem from '../glass-case-item';
 import s from './category-items.module.css';
 
@@ -34,12 +35,10 @@ const CategoryItems = () => {
             </Link>
           ))}
         {!filterByCurrentCategory.length ? (
-          <div className={s.emptyContent}>
-            <div className={s.container}>
-              <h1>К сожалению товаров нет</h1>
-              <h3>Скоро в наличии...</h3>
-            </div>
-          </div>
+          <EmptyContent>
+            <h1>К сожалению товаров нет</h1>
+            <h3>Скоро в наличии...</h3>
+          </EmptyContent>
         ) : ''}
       </div>
     </>

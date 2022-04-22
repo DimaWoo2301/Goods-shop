@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { deleteBasket } from '../../redux/basket-reducer';
 import crushingPriceNumbers from '../../utils/crushing-price-numbers';
+import EmptyContent from '../empty-content';
 import s from './basket-item.module.css';
 
 const BasketItem = () => {
@@ -45,14 +46,10 @@ const BasketItem = () => {
         </>
       ))}
       {!product.length ? (
-        <div className={s.emptyBasket}>
-          <div className={s.container}>
-            <div>
-              <h1>Корзина пуста</h1>
-              <h4>Воспользуйтесь поиском, чтобы найти все что нужно.</h4>
-            </div>
-          </div>
-        </div>
+        <EmptyContent>
+          <h1>Корзина пуста</h1>
+          <h4>Воспользуйтесь поиском, чтобы найти все что нужно.</h4>
+        </EmptyContent>
       ) : (
         <div className={s.wrapperPrice}>
           <div>{price}</div>
