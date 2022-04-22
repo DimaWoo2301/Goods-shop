@@ -19,6 +19,7 @@ module.exports = {
     'simple-import-sort',
   ],
   rules: {
+    'linebreak-style': ['error', process.platform === 'win32' ? 'windows' : 'unix'],
     'react/prop-types': 0,
     'react/function-component-definition': 0,
     'simple-import-sort/imports': 'error',
