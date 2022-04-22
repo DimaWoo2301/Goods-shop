@@ -21,7 +21,7 @@ const ProductPage = () => {
     <div className={s.wrapper}>
       <div className={s.wrapperPhone}>
         <span>{productInfo.name}</span>
-        <img src={characteristicsProduct?.image || productInfo.mainImage} alt="" />
+        <img src={characteristicsProduct?.image || productInfo.mainImage} alt="Картинка продукта" />
       </div>
       <div>
         <div className={s.container_color}>

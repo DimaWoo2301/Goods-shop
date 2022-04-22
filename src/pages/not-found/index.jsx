@@ -12,7 +12,7 @@ const NotFound = () => {
 
   return (
     <div className={s.wrapper}>
-      <img src={lock} alt="" />
+      <img src={lock} alt="Замок" />
       <span className={s.error}>Доступ ограничен</span>
       <div>
         <button className={s.button} type="button" onClick={onGoBack}>&#8594; Вернуться в главное меню</button>

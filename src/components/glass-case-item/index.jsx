@@ -25,7 +25,7 @@ const GlassCaseItem = ({
   return (
     <div className={s.items}>
       <span className={s.name}>{name}</span>
-      <img src={mainImage} alt="" />
+      <img src={mainImage} alt="Картинка продукта" />
       <p>{text}</p>
       <div className={s.price}>
         <span className={s.priceItem}>
