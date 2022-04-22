@@ -23,7 +23,7 @@ const ProductPage = () => {
         <span>{productInfo.name}</span>
         <img src={characteristicsProduct?.image || productInfo.mainImage} alt="" />
       </div>
-      <div className={s.wrapperContainer}>
+      <div>
         <div className={s.container_color}>
           <div className={s.infoPhone}>
             <span>
