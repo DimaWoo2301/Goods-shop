@@ -22,3 +22,16 @@
 .wrapper h1 {
     margin: 0;
 }
+.emptyContent{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: #F7F8FA;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    margin: 0 auto;
+}

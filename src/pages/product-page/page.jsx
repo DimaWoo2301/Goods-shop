@@ -43,8 +43,7 @@ const ProductPage = () => {
             <div className={s.container_color}>
               <span>Характеристики</span>
               <span>
-                Цвет:
-                {colorConverter ? colorConverter.translate : 'Цвет не указан'}
+                {`Цвет:  ${colorConverter ? colorConverter.translate : 'Цвет не указан'}`}
               </span>
             </div>
           )

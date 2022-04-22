@@ -33,6 +33,14 @@ const CategoryItems = () => {
               />
             </Link>
           ))}
+        {!filterByCurrentCategory.length ? (
+          <div className={s.emptyContent}>
+            <div className={s.container}>
+              <h1>К сожалению товаров нет</h1>
+              <h3>Скоро в наличии...</h3>
+            </div>
+          </div>
+        ) : ''}
       </div>
     </>
   );

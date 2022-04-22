@@ -1,21 +1,21 @@
 const COLOR_PRODUCT = [{
-  name: 'red', translate: 'Красный',
+  name: 'red', translate: 'красный',
 }, {
-  name: 'green', translate: 'Зеленый',
+  name: 'green', translate: 'зеленый',
 }, {
-  name: 'blue', translate: 'Синий',
+  name: 'blue', translate: 'синий',
 }, {
-  name: 'black', translate: 'Черный',
+  name: 'black', translate: 'черный',
 }, {
-  name: 'white', translate: 'Красный',
+  name: 'white', translate: 'белый',
 }, {
-  name: 'gray', translate: 'Серый',
+  name: 'gray', translate: 'серый',
 }, {
-  name: 'gold', translate: 'Золотой',
+  name: 'gold', translate: 'золотой',
 }, {
-  name: 'purple', translate: 'Фиолетовый',
+  name: 'purple', translate: 'фиолетовый',
 }, {
-  name: 'yellow', translate: 'Желтый',
+  name: 'yellow', translate: 'желтый',
 }];
 
 export default COLOR_PRODUCT;

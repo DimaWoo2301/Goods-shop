@@ -1,3 +1,25 @@
+import iphone6sGold from '../assets/img/Aphone6s-gold.webp';
+import iphone6sRed from '../assets/img/Aphone6s-red.jpg';
+import iPhone8gray from '../assets/img/Aphone8-grey.webp';
+import iPhone8white from '../assets/img/Aphone8-white.png';
+import iPhone11Black from '../assets/img/Aphone11-black.jpg';
+import iPhone11Purple from '../assets/img/Aphone11-purple.webp';
+import iPhone12Green from '../assets/img/Aphone12-green.png';
+import iPhone12Purple from '../assets/img/Aphone12-purple.webp';
+import iPhone12red from '../assets/img/Aphone12-red.jpg';
+import iPhone12Yellow from '../assets/img/Aphone12-yellow.jpg';
+import HolodosRUS2099Black from '../assets/img/Holodos-RUS-2099-black.webp';
+import HolodosRUS2099White from '../assets/img/Holodos-RUS-2099-white.webp';
+import HuaweiP50ProBlack from '../assets/img/Huawei-p50-pro-black.webp';
+import HuaweiP50ProBlue from '../assets/img/Huawei-p50-pro-blue.jpg';
+import HuaweiP50ProYellow from '../assets/img/Huawei-p50-pro-yellow.png';
+import MacBookProBlack from '../assets/img/MacBook-pro-black.webp';
+import MacBookProWhite from '../assets/img/MacBook-pro-white.webp';
+import MacBookProYellow from '../assets/img/MacBook-pro-yellow.jpg';
+import MakBookWhite from '../assets/img/MacBook-White.webp';
+import XiaomiRedmi9CGreen from '../assets/img/Xiaomi-Redmi-9C-green.jpg';
+import XiaomiRedmi9COrange from '../assets/img/Xiaomi-Redmi-9C-orange.webp';
+
 const initialState = {
   types: [
     {
@@ -34,25 +56,24 @@ const initialState = {
         name: 'Айфон 12',
         price: 199234,
         infoText: 'Хороший телефон, в котором можно играть в ингрушки и серфить в интернете',
-        mainImage:
-          'https://avatars.mds.yandex.net/get-mpic/4705079/img_id9210994203133636452.png/orig',
+        mainImage: iPhone12Purple,
         customize: [
           {
             color: 'red',
-            image: 'https://satelonline.kz/upload/iblock/5fe/zme6u8yjv9m12n8j2bj0ms4w7z34fwp6.jpg',
+            image: iPhone12red,
           },
           {
             color: 'yellow',
-            image: 'https://my-apple-store.ru/wa-data/public/shop/products/70/12/11270/images/15897/15897.970.jpg',
+            image: iPhone12Yellow,
           },
           {
             color: 'green',
             image:
-              'https://ae01.alicdn.com/kf/S82bb252b42144b6d9ee26c648de21f40x.png',
+            iPhone12Green,
           },
           {
             color: 'purple',
-            image: 'https://avatars.mds.yandex.net/get-mpic/4705079/img_id9210994203133636452.png/orig',
+            image: iPhone12Purple,
           },
         ],
       },
@@ -65,15 +86,15 @@ const initialState = {
         price: 2323234,
         infoText: 'Хороший телефон, в котором можно играть в ингрушки',
         mainImage:
-          'https://avatars.mds.yandex.net/get-mpic/4397006/img_id3884474343356692179.jpeg/orig',
+        iPhone11Purple,
         customize: [
           {
             color: 'black',
-            image: 'https://ilounge.ua/files/products/apple-iphone-11-64-gb-black-21_1.1000x.jpg',
+            image: iPhone11Black,
           },
           {
             color: 'purple',
-            image: 'https://avatars.mds.yandex.net/get-mpic/4397006/img_id3884474343356692179.jpeg/orig',
+            image: iPhone11Purple,
           },
         ],
       },
@@ -86,15 +107,15 @@ const initialState = {
         price: 43245234,
         infoText: 'Хороший телефон, но достаточно стары',
         mainImage:
-          'https://avatars.mds.yandex.net/get-mpic/5206920/img_id8651321912915689452.jpeg/orig',
+        iPhone8gray,
         customize: [
           {
             color: 'gray',
-            image: 'https://avatars.mds.yandex.net/get-mpic/5206920/img_id8651321912915689452.jpeg/orig',
+            image: iPhone8gray,
           },
           {
             color: 'white',
-            image: 'https://my-apple.com.ua/image/cache/catalog/iphone-12-new/iphone8/apple_iphone_8_plus_silver-450x450copy-450x450-500x500.png',
+            image: iPhone8white,
           },
         ],
       },
@@ -107,15 +128,15 @@ const initialState = {
         price: 1994,
         infoText: 'Плохой телефон',
         mainImage:
-          'https://avatars.mds.yandex.net/get-mpic/5281727/img_id6212693778084700018.jpeg/orig',
+        XiaomiRedmi9COrange,
         customize: [
           {
             color: 'orange',
-            image: 'https://avatars.mds.yandex.net/get-mpic/5281727/img_id6212693778084700018.jpeg/orig',
+            image: XiaomiRedmi9COrange,
           },
           {
             color: 'green',
-            image: 'https://optogadzhet.ru/wp-content/uploads/2022/03/2022-02-17_220345.800x600-1.jpg',
+            image: XiaomiRedmi9CGreen,
           },
         ],
       },
@@ -124,15 +145,15 @@ const initialState = {
       id: 5,
       typesId: 3,
       productInfo: {
-        name: 'MakBook',
+        name: 'MacBook',
         price: 1994344,
         infoText: 'Лучший ноутбук за все время',
         mainImage:
-          'https://avatars.mds.yandex.net/get-mpic/4944925/img_id5544713746159542779.jpeg/orig',
+        MakBookWhite,
         customize: [
           {
             color: 'white',
-            image: 'https://avatars.mds.yandex.net/get-mpic/4944925/img_id5544713746159542779.jpeg/orig',
+            image: MakBookWhite,
           },
         ],
       },
@@ -145,15 +166,15 @@ const initialState = {
         price: 10004,
         infoText: 'Хороший телефон, но достаточно стары',
         mainImage:
-          'https://avatars.mds.yandex.net/get-mpic/4343059/img_id534492841132060779.jpeg/orig',
+        iphone6sGold,
         customize: [
           {
             color: 'red',
-            image: 'https://saratov.apple-wild.com/image/cache/catalog/newproduct/iphone7/iphone7red_1-500x500.jpg',
+            image: iphone6sRed,
           },
           {
             color: 'gold',
-            image: 'https://avatars.mds.yandex.net/get-mpic/4343059/img_id534492841132060779.jpeg/orig',
+            image: iphone6sGold,
           },
         ],
       },
@@ -166,19 +187,19 @@ const initialState = {
         price: 1000,
         infoText: 'Еще лучше чем тот ноутбук',
         mainImage:
-          'https://avatars.mds.yandex.net/get-mpic/5240013/img_id8615115285392917639.jpeg/orig',
+        MacBookProBlack,
         customize: [
           {
             color: 'white',
-            image: 'https://sterlitamak.istudio-shop.ru/a/istudio/files/multifile/2353/izobrazhenie_2021_11_22_123248.png',
+            image: MacBookProWhite,
           },
           {
             color: 'yellow',
-            image: 'https://3dnews.ru/assets/external/illustrations/2011/11/25/620434/goldapple_600.jpg',
+            image: MacBookProYellow,
           },
           {
             color: 'black',
-            image: 'https://avatars.mds.yandex.net/get-mpic/5240013/img_id8615115285392917639.jpeg/orig',
+            image: MacBookProBlack,
           },
         ],
       },
@@ -191,19 +212,19 @@ const initialState = {
         price: 234234,
         infoText: 'Не пользовался не знаю',
         mainImage:
-          'https://avatars.mds.yandex.net/get-mpic/4429951/img_id531797109849907337.jpeg/orig',
+        HuaweiP50ProBlack,
         customize: [
           {
             color: 'black',
-            image: 'https://avatars.mds.yandex.net/get-mpic/4429951/img_id531797109849907337.jpeg/orig',
+            image: HuaweiP50ProBlack,
           },
           {
             color: 'yellow',
-            image: 'https://shop-cdn.huawei.com/ru/pms/uomcdn/RUHW/pms/202202/gbom/6941487244423/428_428_A378AA4E3054ABBDC666E9B2135C75B2mp.png',
+            image: HuaweiP50ProYellow,
           },
           {
             color: 'blue',
-            image: 'https://www.huaweicentral.com/wp-content/uploads/2022/03/huawei-p50-pro-rippling-clouds-2.jpg',
+            image: HuaweiP50ProBlue,
           },
         ],
       },
@@ -216,15 +237,15 @@ const initialState = {
         price: 59999,
         infoText: 'Хороший холодильник, держит до -40',
         mainImage:
-          'https://c.dns-shop.ru/thumb/st4/fit/500/500/fabefcd9412f2d8716b65e427d6ebadd/507fa484c95b3477c75fec564bd3c883566235e0e71abe0d07544e6dca4d0dcf.jpg.webp',
+        HolodosRUS2099Black,
         customize: [
           {
             color: 'black',
-            image: 'https://c.dns-shop.ru/thumb/st4/fit/500/500/1e13250783cd8c2e724bc8c300e1d6ac/a6e41192f437fb0ba093f29bd7f8d06e30dd4a29877e9361ca8fab4e1f65e721.jpg.webp',
+            image: HolodosRUS2099Black,
           },
           {
             color: 'white',
-            image: 'https://c.dns-shop.ru/thumb/st4/fit/500/500/fabefcd9412f2d8716b65e427d6ebadd/507fa484c95b3477c75fec564bd3c883566235e0e71abe0d07544e6dca4d0dcf.jpg.webp',
+            image: HolodosRUS2099White,
           },
         ],
       },

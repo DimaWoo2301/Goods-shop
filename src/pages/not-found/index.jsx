@@ -1,12 +1,24 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
+import lock from '../../assets/img/lock.png';
 import s from './not-found.module.css';
 
-const NotFound = () => (
-  <div className={s.wrapper}>
-    <img src="data:image/png;base64,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" alt="" />
-    <span className={s.error}>Доступ ограничен</span>
-  </div>
-);
+const NotFound = () => {
+  const navigate = useNavigate();
+  const onGoBack = () => {
+    navigate(-1);
+  };
+
+  return (
+    <div className={s.wrapper}>
+      <img src={lock} alt="" />
+      <span className={s.error}>Доступ ограничен</span>
+      <div>
+        <button className={s.button} type="button" onClick={onGoBack}>&#8594; Вернуться в главное меню</button>
+      </div>
+    </div>
+  );
+};
 
 export default NotFound;

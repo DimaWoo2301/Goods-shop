@@ -10,18 +10,15 @@ const BasketItem = () => {
   const dispatch = useDispatch();
   const product = useSelector((state) => state.basket.basket);
   const fullPrice = product.reduce((total, el) => total + el.productInfo.price, 0);
-  const countProduct = product.length === 0 ? '' : `Количество продуктов: ${product.length}`;
-  const price = crushingPriceNumbers(fullPrice) === 0 ? 'Карзина пуста'
-    : `Полная цена всех покупок: ${crushingPriceNumbers(fullPrice)} Руб.`;
+  const countProduct = `Количество продуктов: ${product.length}`;
+  const price = `Полная цена всех покупок: ${crushingPriceNumbers(fullPrice)} Руб.`;
   const onDeleteProduct = (id) => () => {
     dispatch(deleteBasket(id));
   };
-  // className={cn(s.circle, { [s.active]: el.color === currentColor })}`${s.infoProduct}${s.info}`
   return (
-    <div className={s.container}>
+    <div className={s.content}>
       {product.map((el) => (
         <>
-
           <div className={s.wrapper}>
             <img className={s.imageProduct} src={el.productInfo.mainImage} alt="Картинка продукта" />
             <div>
@@ -47,10 +44,21 @@ const BasketItem = () => {
           <div className={s.branchLine} />
         </>
       ))}
-      <div className={s.wrapperPrice}>
-        <div>{price}</div>
-        <div>{countProduct}</div>
-      </div>
+      {!product.length ? (
+        <div className={s.emptyBasket}>
+          <div className={s.container}>
+            <div>
+              <h1>Корзина пуста</h1>
+              <h4>Воспользуйтесь поиском, чтобы найти все что нужно.</h4>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className={s.wrapperPrice}>
+          <div>{price}</div>
+          <div>{countProduct}</div>
+        </div>
+      )}
     </div>
   );
 };
