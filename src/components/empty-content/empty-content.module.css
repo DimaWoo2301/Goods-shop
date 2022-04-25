@@ -6,8 +6,6 @@
     background-color: #F7F8FA;
 }
 .container{
-    display: flex;
-    flex-direction: column;
     width: 900px;
     margin: 0 auto;
 }

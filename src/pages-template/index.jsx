@@ -24,7 +24,7 @@ const ShopWindow = () => {
         </div>
       </header>
       <div className={s.container}>
-        <button className={s.button} type="button" onClick={onGoBack}>&#60;</button>
+        <button className={s.button} type="button" onClick={onGoBack}>&#8592; Назад</button>
         <Outlet />
       </div>
       <footer className={s.footer}>

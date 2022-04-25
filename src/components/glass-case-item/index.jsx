@@ -13,11 +13,10 @@ const GlassCaseItem = ({
   const dispatch = useDispatch();
   const basket = useSelector((state) => state.basket.basket.find((el) => el.id === product.id));
   const isProductInBasket = !basket ? 'Купить' : 'В корзине';
-
   const onClickBasket = (event) => {
     event.preventDefault();
     if (!basket) {
-      dispatch(setBasket(product));
+      dispatch(setBasket(product, mainImage));
     } else {
       navigate('/basket');
     }

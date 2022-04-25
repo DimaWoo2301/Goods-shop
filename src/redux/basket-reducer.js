@@ -1,5 +1,6 @@
 const SET_IT_BASKET = 'SET_IT_BASKET';
 const DELETE_POST = 'DELETE_POST';
+const DELETE_ALL_POST = 'DELETE_ALL_POST';
 const initialState = {
   basket: [],
   isFetching: true,
@@ -17,9 +18,10 @@ const basketReducer = (state = initialState, action) => {
             id: action.product.id,
             isActive: true,
             productInfo: {
+              infoText: action.color,
               name: action.product.productInfo.name,
               price: action.product.productInfo.price,
-              mainImage: action.product.productInfo.mainImage,
+              mainImage: action.photo,
             },
           },
         ],
@@ -27,7 +29,13 @@ const basketReducer = (state = initialState, action) => {
     case DELETE_POST: {
       return {
         ...state,
-        basket: state.basket.filter((el) => el.id !== action.idProduct),
+        basket: state.basket.filter((el) => el.id !== action.idProduct.id),
+      };
+    }
+    case DELETE_ALL_POST: {
+      return {
+        ...state,
+        basket: [],
       };
     }
     default:
@@ -35,7 +43,10 @@ const basketReducer = (state = initialState, action) => {
   }
 };
 
-export const setBasket = (product) => ({ type: SET_IT_BASKET, product });
+export const setBasket = (product, photo, color) => ({
+  type: SET_IT_BASKET, product, photo, color,
+});
 export const deleteBasket = (idProduct) => ({ type: DELETE_POST, idProduct });
+export const deleteAllBasket = () => ({ type: DELETE_ALL_POST });
 
 export default basketReducer;

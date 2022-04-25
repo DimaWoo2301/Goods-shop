@@ -7,7 +7,7 @@ import s from './not-found.module.css';
 const NotFound = () => {
   const navigate = useNavigate();
   const onGoBack = () => {
-    navigate(-1);
+    navigate('/');
   };
 
   return (

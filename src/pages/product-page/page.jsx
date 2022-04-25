@@ -1,21 +1,35 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { NavLink, useNavigate, useParams } from 'react-router-dom';
 
 import SwitchColor from '../../components/switch-color';
 import COLOR_PRODUCT from '../../constants/color-products';
+import { setBasket } from '../../redux/basket-reducer';
 import crushingPriceNumbers from '../../utils/crushing-price-numbers';
 import s from './show-case-window.module.css';
 
 const ProductPage = () => {
   const { id } = useParams();
-  const products = useSelector((state) => state.shop.products);
+  const product = useSelector((state) => state.shop.products.find((el) => el.id === Number(id)));
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-  const { productInfo } = products.find((el) => el.id === Number(id));
+  const { productInfo } = product;
 
   const [characteristicsProduct, setCharacteristicsProduct] = useState(null);
 
   const colorConverter = COLOR_PRODUCT.find((el) => el.name === characteristicsProduct?.color);
+  const basket = useSelector((state) => state.basket.basket
+    .find((el) => el.id === product.id && el.productInfo.infoText === colorConverter?.translate));
+  const isProductInBasket = !basket ? 'Купить' : 'В корзине';
+  const onClickBasket = (event) => {
+    event.preventDefault();
+    if (!basket) {
+      dispatch(setBasket(product, characteristicsProduct.image, colorConverter.translate));
+    } else {
+      navigate('/basket');
+    }
+  };
 
   return (
     <div className={s.wrapper}>
@@ -45,6 +59,9 @@ const ProductPage = () => {
               <span>
                 {`Цвет:  ${colorConverter ? colorConverter.translate : 'Цвет не указан'}`}
               </span>
+              <NavLink to="/basket">
+                <button onClick={onClickBasket} type="submit">{isProductInBasket}</button>
+              </NavLink>
             </div>
           )
         }
