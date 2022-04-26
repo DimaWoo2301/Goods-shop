@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BasketItem from '../../components/basket-item';
+import BasketItem from './Component/basket-item';
 
 const ShoppingBasket = () => (<BasketItem />);
 
