@@ -31,17 +31,19 @@ const BasketItem = () => {
   return (
     <div>
       {!product.length ? (
-        <EmptyContent>
-          <h1>Корзина пуста</h1>
-          <h4>Воспользуйтесь поиском, чтобы найти все что нужно.</h4>
-          <button
-            type="button"
-            className={s.button}
-            onClick={onGoBack}
-          >
-            Вернуться на главную страницу
-          </button>
-        </EmptyContent>
+        <div className={s.empty}>
+          <EmptyContent>
+            <h1>Корзина пуста</h1>
+            <h4>Воспользуйтесь поиском, чтобы найти все что нужно.</h4>
+            <button
+              type="button"
+              className={s.button}
+              onClick={onGoBack}
+            >
+              Вернуться на главную страницу
+            </button>
+          </EmptyContent>
+        </div>
       ) : (
         <>
           <h1 className={s.header}>Корзина</h1>
@@ -153,7 +155,6 @@ const BasketItem = () => {
           </div>
         </>
       )}
-      ;
     </div>
   );
 };
