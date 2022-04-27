@@ -2,10 +2,16 @@ const SET_IT_BASKET = 'SET_IT_BASKET';
 const DELETE_POST = 'DELETE_POST';
 const DELETE_ALL_POST = 'DELETE_ALL_POST';
 const initialState = {
-  basket: [],
-  isFetching: true,
-  isActive: false,
-  allPrice: 0,
+  basket: [{
+    id: 1,
+    isActive: true,
+    productInfo: {
+      infoText: 'awd',
+      name: 'awd',
+      price: 4123,
+    },
+  },
+  ],
 };
 const basketReducer = (state = initialState, action) => {
   switch (action.type) {

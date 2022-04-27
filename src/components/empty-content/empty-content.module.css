@@ -9,3 +9,9 @@
     width: 900px;
     margin: 0 auto;
 }
+.button{
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    background-color: #F7F8FA;
+}

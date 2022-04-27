@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 
-import { ReactComponent as Basket } from '../assets/img/Basket.svg';
+import Icon from '../components/icon/icon';
 import ROUTES from '../constants/routes';
 import s from './shop.module.css';
 
@@ -19,7 +19,9 @@ const ShopWindow = () => {
             <NavLink to={ROUTES.BASE}>Магазин</NavLink>
             <NavLink to={ROUTES.CATEGORY}>Категория</NavLink>
             <div className={s.basket}>
-              <NavLink to={ROUTES.BASKET}><Basket className={s.basketImg} /></NavLink>
+              <NavLink to={ROUTES.BASKET}>
+                <Icon name="basket" fill="white" />
+              </NavLink>
             </div>
           </div>
         </div>
