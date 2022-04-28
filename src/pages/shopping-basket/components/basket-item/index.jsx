@@ -1,55 +1,42 @@
 import cn from 'classnames';
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
+import { useDispatch } from 'react-redux';
 
 import { deleteBasket } from '../../../../redux/basket-reducer';
 import crushingPriceNumbers from '../../../../utils/crushing-price-numbers';
 import s from '../../shop-basket.module.css';
 
-const BasketItem = () => {
-  const product = useSelector((state) => state.basket.basket);
+const BasketItem = ({
+  activeCheckboxes, setActiveCheckboxes, products, setProducts,
+}) => {
   const dispatch = useDispatch();
   const onDeleteProduct = (el) => () => {
     dispatch(deleteBasket(el));
+
+    const filterListProduct = products.filter((item) => item.id !== el);
+    setProducts(filterListProduct);
   };
-  const [productCheck, setProductCheck] = useState([]);
 
-  useEffect(() => {
-    setProductCheck(product);
-  }, [product]);
-
-  const handelChange = (e) => {
-    const { name, checked } = e.target;
-    if (name === 'allSelect') {
-      const tempProduct = productCheck.map((el) => ({ ...el, isChecked: checked }));
-      setProductCheck(tempProduct);
+  const changeCheckBox = (id) => () => {
+    const existCurrentIdByActiveCheckboxes = activeCheckboxes.includes(id);
+    if (existCurrentIdByActiveCheckboxes) {
+      const filter = activeCheckboxes.filter((el) => el !== id);
+      setActiveCheckboxes(filter);
     } else {
-      const tempProduct = productCheck
-        .map((el) => (el.productInfo.name === name ? { ...el, isChecked: checked } : el));
-      setProductCheck(tempProduct);
+      setActiveCheckboxes([...activeCheckboxes, id]);
     }
   };
-  const checkedFilter = productCheck.filter((item) => item?.isChecked !== true).length < 1;
   return (
     <div>
-      <input
-        type="checkbox"
-        name="allSelect"
-        checked={checkedFilter}
-        onChange={handelChange}
-      />
-      <span>Выбрать все</span>
-      <button type="button" className={s.deleteText}>Удалить выбранные</button>
-      {productCheck.map((el) => (
+      {products.map((el) => (
         <>
           <div className={s.lineProduct} />
           <div className={s.itemProductContainer}>
             <div>
               <input
                 type="checkbox"
-                checked={el?.isChecked || false}
-                name={el.productInfo.name}
-                onChange={handelChange}
+                checked={activeCheckboxes.includes(el.id)}
+                onChange={changeCheckBox(el.id)}
               />
             </div>
             <div className={s.itemProductImg}>
@@ -67,7 +54,7 @@ const BasketItem = () => {
                 </span>
               </div>
               <div className={cn(s.itemProduct, s.itemProductDelete)}>
-                <button type="button" onClick={onDeleteProduct(el)}>
+                <button type="button" onClick={onDeleteProduct(el.id)}>
                   Удалить
                 </button>
               </div>

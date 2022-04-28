@@ -35,7 +35,7 @@ const basketReducer = (state = initialState, action) => {
     case DELETE_POST: {
       return {
         ...state,
-        basket: state.basket.filter((el) => el.id !== action.idProduct.id),
+        basket: state.basket.filter((el) => el.id !== action.idProduct),
       };
     }
     case DELETE_ALL_POST: {
