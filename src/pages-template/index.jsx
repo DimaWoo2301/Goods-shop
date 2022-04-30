@@ -20,6 +20,7 @@ const ShopWindow = () => {
           <div className={s.itemLink}>
             <NavLink to={ROUTES.BASE}>Магазин</NavLink>
             <NavLink to={ROUTES.CATEGORY}>Категория</NavLink>
+            <NavLink to={ROUTES.AССOUNT}>Аккаунт</NavLink>
             <div className={s.basket}>
               <NavLink to={ROUTES.BASKET}>
                 <Icon name={ICONS_NAME.BASKET} fill="white" />

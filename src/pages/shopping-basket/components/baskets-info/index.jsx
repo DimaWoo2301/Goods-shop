@@ -5,7 +5,7 @@ import s from '../../shop-basket.module.css';
 
 const BasketsInfo = ({ product }) => {
   const fullPrice = crushingPriceNumbers(product
-    .reduce((total, el) => total + el.productInfo.price, 0));
+    .reduce((total, el) => total + el.productInfo.price * el.productInfo.counts, 0));
   return (
     <div className={s.wrapperBay}>
       <div className={s.infoBayProduct}>

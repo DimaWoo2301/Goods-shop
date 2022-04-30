@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import EmptyContent from '../../components/empty-content';
@@ -9,6 +9,10 @@ import s from './shop-basket.module.css';
 const ShopBasket = () => {
   const product = useSelector((state) => state.basket.basket);
   const [products, setProducts] = useState(product);
+
+  useEffect(() => {
+    localStorage.setItem('product', JSON.stringify(product));
+  }, [product]);
 
   if (!product.length) {
     return (

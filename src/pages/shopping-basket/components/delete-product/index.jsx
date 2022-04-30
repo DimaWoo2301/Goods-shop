@@ -47,13 +47,16 @@ const DeleteProduct = ({ products, setProducts }) => {
       <span>Выбрать все</span>
       <button type="button" onClick={onDeleteActiveCheckboxes} className={s.deleteText}>Удалить выбранные</button>
       <div className={s.containerProduct}>
-        <BasketItems
-          key={products.id}
-          activeCheckboxes={activeCheckboxes}
-          setActiveCheckboxes={setActiveCheckboxes}
-          products={products}
-          setProducts={setProducts}
-        />
+        {products.map((product) => (
+          <BasketItems
+            key={products.id}
+            activeCheckboxes={activeCheckboxes}
+            setActiveCheckboxes={setActiveCheckboxes}
+            products={products}
+            setProducts={setProducts}
+            product={product}
+          />
+        ))}
       </div>
     </>
   );

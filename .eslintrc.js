@@ -28,5 +28,6 @@ module.exports = {
     'jsx-a11y/control-has-associated-label': 0,
     'default-param-last': 0,
     'react/jsx-no-useless-fragment': 0,
+    'no-param-reassign': 0,
   },
 };
