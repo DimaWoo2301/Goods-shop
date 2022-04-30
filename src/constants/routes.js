@@ -2,7 +2,7 @@ const ROUTES = {
   BASE: '/',
   CATEGORY: '/category-items',
   POST: '/post',
-  BASKET: 'basket',
+  BASKET: '/basket',
 };
 
 export default ROUTES;

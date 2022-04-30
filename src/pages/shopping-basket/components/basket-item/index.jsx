@@ -2,7 +2,7 @@ import cn from 'classnames';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
-import { deleteBasket } from '../../../../redux/basket-reducer';
+import { deleteBasket } from '../../../../redux/basket/action';
 import crushingPriceNumbers from '../../../../utils/crushing-price-numbers';
 import s from '../../shop-basket.module.css';
 

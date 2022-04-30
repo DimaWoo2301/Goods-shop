@@ -10,14 +10,16 @@ const SwitchColor = ({
     onChange(characteristicsProduct);
   };
 
+  const getCurrentColor = (product) => product.color === currentColor;
+
   return (
     <div className={s.radius}>
-      {listColor.map((el) => (
+      {listColor.map((productInfo) => (
         <button
           type="button"
-          onClick={onChangeColor(el)}
-          style={{ backgroundColor: el.color }}
-          className={cn(s.circle, { [s.active]: el.color === currentColor })}
+          onClick={onChangeColor(productInfo)}
+          style={{ backgroundColor: productInfo.color }}
+          className={cn(s.circle, { [s.active]: getCurrentColor(productInfo) })}
         />
       ))}
     </div>

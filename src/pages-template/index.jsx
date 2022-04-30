@@ -1,12 +1,14 @@
 import React from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 
+import ICONS_NAME from '../components/icon/constants/icons-name';
 import Icon from '../components/icon/icon';
 import ROUTES from '../constants/routes';
 import s from './shop.module.css';
 
 const ShopWindow = () => {
   const navigate = useNavigate();
+
   const onGoBack = () => {
     navigate(-1);
   };
@@ -20,7 +22,7 @@ const ShopWindow = () => {
             <NavLink to={ROUTES.CATEGORY}>Категория</NavLink>
             <div className={s.basket}>
               <NavLink to={ROUTES.BASKET}>
-                <Icon name="basket" fill="white" />
+                <Icon name={ICONS_NAME.BASKET} fill="white" />
               </NavLink>
             </div>
           </div>

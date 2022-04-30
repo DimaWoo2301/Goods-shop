@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ICONS_COMPONENTS from './constants';
+import ICONS_COMPONENTS from './constants/icons-components';
 
 const Icon = ({
   name, fill, width = 25, height = 25, opacity,
