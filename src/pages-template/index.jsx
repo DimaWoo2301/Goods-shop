@@ -1,0 +1,44 @@
+import React from 'react';
+import { NavLink, Outlet, useNavigate } from 'react-router-dom';
+
+import ICONS_NAME from '../components/icon/constants/icons-name';
+import Icon from '../components/icon/icon';
+import ROUTES from '../constants/routes';
+import s from './shop.module.css';
+
+const ShopWindow = () => {
+  const navigate = useNavigate();
+
+  const onGoBack = () => {
+    navigate(-1);
+  };
+
+  return (
+    <div className={s.wrapper}>
+      <header className={s.header}>
+        <div className={s.headerContainer}>
+          <div className={s.itemLink}>
+            <NavLink to={ROUTES.BASE}>Магазин</NavLink>
+            <NavLink to={ROUTES.CATEGORY}>Категория</NavLink>
+            <div className={s.basket}>
+              <NavLink to={ROUTES.BASKET}>
+                <Icon name={ICONS_NAME.BASKET} fill="white" />
+              </NavLink>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div className={s.container}>
+        <button className={s.button} type="button" onClick={onGoBack}>&#8592; Назад</button>
+        <Outlet />
+      </div>
+      <footer className={s.footer}>
+        <div className={s.footerContainer}>
+          <span>2022</span>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default ShopWindow;

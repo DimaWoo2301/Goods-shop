@@ -1,0 +1,13 @@
+body {
+    background-color: #FCF8F2;
+}
+.wrapper {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 50px 0 50px 0;
+}
+.wrapper a{
+    color: #000000;
+    text-decoration: none;
+}

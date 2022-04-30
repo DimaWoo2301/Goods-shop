@@ -1,0 +1,29 @@
+
+.wrapper_items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.item{
+    width: 220px;
+    height: 220px;
+    margin: 0 10px 14px 0;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 16%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.item:hover{
+    box-shadow: 2px 3px 5px 2px rgb(0 0 0 / 16%);
+}
+.item img{
+    object-fit: contain;
+    background-repeat: no-repeat;
+    width: 220px;
+    height: 220px;
+}
