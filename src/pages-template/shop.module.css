@@ -1,6 +1,6 @@
 .container {
-    max-width: 1100px;
-    min-width: 1100px;
+    max-width: 1300px;
+    min-width: 1300px;
     margin: 0 auto;
 }
 
@@ -44,14 +44,17 @@
     right: 20px;
     position: absolute;
 }
+.basketImg *{
+    fill: #ffffff;
+}
 .button{
     cursor: pointer;
     position: absolute;
     border: none;
     background-color: #FCF8F2;
     color: #000000;
-    font-size: 30px;
-    margin: 10px 0 0 90px;
+    font-size: 15px;
+    margin: 15px 0 0 90px;
 }
 .basketButton{
 position: absolute;

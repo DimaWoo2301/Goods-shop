@@ -2,12 +2,12 @@ import { applyMiddleware, combineReducers, createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 
-import basketReducer from './basket-reducer';
+import reducer from './basket/reducer';
 import shopReducer from './shop-reducer';
 
 const rootReducer = combineReducers({
 
-  basket: basketReducer,
+  basket: reducer,
   shop: shopReducer,
 });
 

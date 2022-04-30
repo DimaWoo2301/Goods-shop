@@ -11,7 +11,7 @@ import Category from './pages/category-page/page';
 import ShopWindowPage from './pages/main-shop-window/page';
 import NotFound from './pages/not-found';
 import ProductPage from './pages/product-page/page';
-import ShoppingBasket from './pages/shopping-basket/page';
+import ShopBasket from './pages/shopping-basket/page';
 import ShopWindow from './pages-template';
 import store from './redux';
 
@@ -23,7 +23,7 @@ function App() {
         <Route path={`${ROUTES.POST}/:id`} element={<ProductPage />} />
         <Route path={ROUTES.CATEGORY} element={<Category />} />
         <Route path="category/:typesId" element={<CategoryItems />} />
-        <Route path={ROUTES.BASKET} element={<ShoppingBasket />} />
+        <Route path={ROUTES.BASKET} element={<ShopBasket />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
