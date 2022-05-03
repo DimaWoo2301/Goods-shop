@@ -15,7 +15,7 @@ import ShopBasket from './pages/shopping-basket/page';
 import ShopWindow from './pages-template';
 import store from './redux';
 
-function App() {
+const App = () => {
   return (
     <Routes>
       <Route path="/" element={<ShopWindow />}>
@@ -28,13 +28,14 @@ function App() {
       </Route>
     </Routes>
   );
-}
+};
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </BrowserRouter>,
-  document.getElementById('root'),
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>,
+    document.getElementById('root'),
 );
+

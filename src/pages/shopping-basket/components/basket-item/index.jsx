@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 
 import { actionChangeCountProducts, deleteBasket } from '../../../../redux/basket/action';
 import crushingPriceNumbers from '../../../../utils/crushing-price-numbers';
-import s from '../../shop-basket.module.css';
+import s from './basket-item.module.css';
 
 const BasketItem = ({
   activeCheckboxes, setActiveCheckboxes, product, products, setProducts,
@@ -73,12 +73,15 @@ const BasketItem = ({
           </div>
           <div className={s.itemProductPrice}>
             <span>
-              {crushingPriceNumbers(product.productInfo.price) }
-&nbsp;₽
+              {crushingPriceNumbers(product.productInfo.price) }&nbsp;₽
             </span>
           </div>
           <div className={s.itemProductInput}>
-            <input type="text" value={countProducts} onChange={changeCountProducts} onBlur={onBlurCountProducts(product.id)} />
+            <input
+              type="text"
+              value={countProducts}
+              onChange={changeCountProducts}
+              onBlur={onBlurCountProducts(product.id)} />
           </div>
         </div>
       </>

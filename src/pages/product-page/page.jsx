@@ -22,7 +22,7 @@ const ProductPage = () => {
 
   const colorConverter = COLOR_PRODUCT.find((el) => el.name === characteristicsProduct?.color);
   const basket = useSelector((state) => state.basket.basket
-    .find((el) => el.id === product.id && el.productInfo.infoText === colorConverter?.translate));
+      .find((el) => el.id === product.id && el.productInfo.infoText === colorConverter?.translate));
   const textBayOrInBasket = !basket ? 'Купить' : 'В корзине';
   const translateTextColor = (color) => `Цвет:  ${color ? color.translate : 'Цвет не указан'}`;
 
@@ -39,15 +39,15 @@ const ProductPage = () => {
     <>
       {
         characteristicsProduct && (
-        <div className={s.container_color}>
-          <span>Характеристики</span>
-          <span>
-            {translateTextColor(colorConverter)}
-          </span>
-          <NavLink to={`${ROUTES.BASKET}`}>
-            <button onClick={onClickBasket} type="submit">{textBayOrInBasket}</button>
-          </NavLink>
-        </div>
+          <div className={s.container_color}>
+            <span>Характеристики</span>
+            <span>
+              {translateTextColor(colorConverter)}
+            </span>
+            <NavLink to={`${ROUTES.BASKET}`}>
+              <button onClick={onClickBasket} type="submit">{textBayOrInBasket}</button>
+            </NavLink>
+          </div>
         )
       }
     </>

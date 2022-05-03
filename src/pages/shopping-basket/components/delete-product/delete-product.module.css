@@ -1,0 +1,10 @@
+.deleteText{
+    color: #f91155;
+    margin-right: 0;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+.containerProduct{
+    padding: 16px;
+}

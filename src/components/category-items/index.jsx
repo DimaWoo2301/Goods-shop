@@ -22,18 +22,18 @@ const CategoryItems = () => {
       </div>
       <div className={s.wrapperItem}>
         {filterByCurrentCategory
-          .map((el) => (
-            <Link key={el.productInfo.name} to={`/post/${el.id}`}>
-              <GlassCaseItem
-                name={el.productInfo.name}
-                price={el.productInfo.price}
-                text={el.productInfo.infoText}
-                mainImage={el.productInfo.mainImage}
-                id={el.id}
-                product={el}
-              />
-            </Link>
-          ))}
+            .map((el) => (
+              <Link key={el.productInfo.name} to={`/post/${el.id}`}>
+                <GlassCaseItem
+                  name={el.productInfo.name}
+                  price={el.productInfo.price}
+                  text={el.productInfo.infoText}
+                  mainImage={el.productInfo.mainImage}
+                  id={el.id}
+                  product={el}
+                />
+              </Link>
+            ))}
         {!filterByCurrentCategory.length ? (
           <EmptyContent>
             <h1>К сожалению товаров нет</h1>

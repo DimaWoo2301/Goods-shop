@@ -30,22 +30,26 @@ const initialState = {
     {
       id: 2,
       name: 'Холодильники',
-      img: 'https://static6.depositphotos.com/1027775/640/i/450/depositphotos_6407636-stock-photo-modern-refrigerator-isolated-on-a.jpg',
+      img: 'https://static6.depositphotos.com/1027775/640/i/450/depositphotos_6407636-stock-photo' +
+        '-modern-refrigerator-isolated-on-a.jpg',
     },
     {
       id: 3,
       name: 'Ноутбуки',
-      img: 'https://st4.depositphotos.com/1890869/24643/v/450/depositphotos_246431000-stock-illustration-isolated-laptop-empty-space-white.jpg?forcejpeg=true',
+      img: 'https://st4.depositphotos.com/1890869/24643/v/450/depositphotos_246431000-stock' +
+        '-illustration-isolated-laptop-empty-space-white.jpg?forcejpeg=true',
     },
     {
       id: 4,
       name: 'Комплектующие для коммпьютеров',
-      img: 'https://st4.depositphotos.com/1890869/24643/v/450/depositphotos_246431000-stock-illustration-isolated-laptop-empty-space-white.jpg?forcejpeg=true',
+      img: 'https://st4.depositphotos.com/1890869/24643/v/450/depositphotos_246431000-stock' +
+        '-illustration-isolated-laptop-empty-space-white.jpg?forcejpeg=true',
     },
     {
       id: 5,
       name: 'Стиральные машины',
-      img: 'https://st4.depositphotos.com/1890869/24643/v/450/depositphotos_246431000-stock-illustration-isolated-laptop-empty-space-white.jpg?forcejpeg=true',
+      img: 'https://st4.depositphotos.com/1890869/24643/v/450/depositphotos_246431000-stock' +
+        '-illustration-isolated-laptop-empty-space-white.jpg?forcejpeg=true',
     },
   ],
   products: [

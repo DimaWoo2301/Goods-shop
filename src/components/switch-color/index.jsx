@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import React from 'react';
-
+import { v4 as uuidv4 } from 'uuid';
 import s from './switch-color.module.css';
 
 const SwitchColor = ({
@@ -11,11 +11,11 @@ const SwitchColor = ({
   };
 
   const getCurrentColor = (product) => product.color === currentColor;
-
   return (
     <div className={s.radius}>
       {listColor.map((productInfo) => (
         <button
+          key={uuidv4()}
           type="button"
           onClick={onChangeColor(productInfo)}
           style={{ backgroundColor: productInfo.color }}

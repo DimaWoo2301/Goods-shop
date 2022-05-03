@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { deleteBasket } from '../../../../redux/basket/action';
-import s from '../../shop-basket.module.css';
+import s from './delete-product.module.css';
 import BasketItems from '../basket-item';
+import { v4 as uuidv4 } from 'uuid';
 
 const DeleteProduct = ({ products, setProducts }) => {
   const dispatch = useDispatch();
@@ -13,7 +14,7 @@ const DeleteProduct = ({ products, setProducts }) => {
 
   const onDeleteActiveCheckboxes = () => {
     const filterListProduct = products.filter(
-      (item) => !activeCheckboxes.includes(item.id),
+        (item) => !activeCheckboxes.includes(item.id),
     );
 
     activeCheckboxes.forEach((id) => {
@@ -45,7 +46,13 @@ const DeleteProduct = ({ products, setProducts }) => {
         checked={isAllCheckbox}
       />
       <span>Выбрать все</span>
-      <button type="button" onClick={onDeleteActiveCheckboxes} className={s.deleteText}>Удалить выбранные</button>
+      <button
+        key={uuidv4()}
+        type="button"
+        onClick={onDeleteActiveCheckboxes}
+        className={s.deleteText}>
+        Удалить выбранные
+      </button>
       <div className={s.containerProduct}>
         {products.map((product) => (
           <BasketItems

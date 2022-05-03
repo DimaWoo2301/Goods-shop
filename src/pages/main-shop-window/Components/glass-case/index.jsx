@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 import GlassCaseItem from '../../../../components/glass-case-item';
 import s from './show-case.module.css';
+import ROUTES from '../../../../constants/routes';
 
 const GlassCase = () => {
   const products = useSelector((state) => state.shop.products);
@@ -11,7 +12,7 @@ const GlassCase = () => {
     <div>
       <div className={s.wrapper}>
         {products.map((product) => (
-          <NavLink key={product.productInfo.name} to={`/post/${product.id}`}>
+          <NavLink key={product.productInfo.name} to={`${ROUTES.POST}/${product.id}`}>
             <GlassCaseItem
               name={product.productInfo.name}
               price={product.productInfo.price}

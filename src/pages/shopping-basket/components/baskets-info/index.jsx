@@ -1,11 +1,11 @@
 import React from 'react';
 
 import crushingPriceNumbers from '../../../../utils/crushing-price-numbers';
-import s from '../../shop-basket.module.css';
+import s from './basket-item.module.css';
 
 const BasketsInfo = ({ product }) => {
   const fullPrice = crushingPriceNumbers(product
-    .reduce((total, el) => total + el.productInfo.price * el.productInfo.counts, 0));
+      .reduce((total, el) => total + el.productInfo.price * el.productInfo.counts, 0));
   return (
     <div className={s.wrapperBay}>
       <div className={s.infoBayProduct}>
@@ -29,9 +29,7 @@ const BasketsInfo = ({ product }) => {
             Общая стоимость
           </span>
           <span className={s.titleBayProduct}>
-            {fullPrice}
-            {' '}
-            ₽
+            {fullPrice}&nbsp;₽
           </span>
         </div>
       </div>

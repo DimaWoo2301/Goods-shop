@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { setBasket } from '../../redux/basket/action';
 import crushingPriceNumbers from '../../utils/crushing-price-numbers';
 import s from './glass-case-items.module.css';
+import { v4 as uuidv4 } from 'uuid';
 
 const GlassCaseItem = ({
   name, mainImage, text, price, product,
@@ -12,7 +13,8 @@ const GlassCaseItem = ({
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const basket = useSelector((state) => state.basket.basket.find((el) => el.id === product.id));
+  const basket = useSelector((state) =>
+    state.basket.basket.find((el) => el.id === product.id));
   const textBayOrInBasket = !basket ? 'Купить' : 'В корзине';
   const onClickBasket = (event) => {
     event.preventDefault();
@@ -32,7 +34,12 @@ const GlassCaseItem = ({
           {crushingPriceNumbers(price)}
           <span> руб.</span>
         </span>
-        <button onClick={onClickBasket} type="submit" className={s.button}>{textBayOrInBasket}</button>
+        <button key={uuidv4()}
+          onClick={onClickBasket}
+          type="submit"
+          className={s.button}>
+          {textBayOrInBasket}
+        </button>
       </div>
     </div>
   );
