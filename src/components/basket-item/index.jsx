@@ -11,7 +11,7 @@ const BasketItem = () => {
   const product = useSelector((state) => state.basket.basket);
   const fullPrice = product.reduce((total, el) => total + el.productInfo.price, 0);
   const countProduct = `Количество продуктов: ${product.length}`;
-  const price = `Полная цена всех покупок: ${crushingPriceNumbers(fullPrice)} Руб.`;
+  const price = `Полная цена всех покупок: ${crushingPriceNumbers(fullPrice)} РУБ.`;
   const onDeleteProduct = (id) => () => {
     dispatch(deleteBasket(id));
   };
